@@ -21,7 +21,6 @@ function interface(fields) {
     }
     for (var f in fields) {
       if (!fields[f].satisfied(obj[f])) {
-        console.error(f, obj);
         return new Error('Interface not satisfied,' + 
             ' object of instance ' + (obj.constructor.name) +
             ' lacks ' + fields[f].name + ' field ' + f);
